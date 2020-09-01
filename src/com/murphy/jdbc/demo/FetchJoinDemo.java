@@ -34,6 +34,7 @@ public class FetchJoinDemo {
             int theId = 1;
 
             // when executed, will load instructor and courses all at once
+            // 可以省略前面的 SELECT i
             Query<Instructor> query =
                     session.createQuery("SELECT i FROM Instructor i " +
                                         "JOIN FETCH i.courses " +
