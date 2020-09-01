@@ -31,24 +31,16 @@ public class EagerLazyDemo {
             int theInstructor = 1;
             Instructor tempInstructor = session.get(Instructor.class, theInstructor);
 
-//            List<Course> courses = session.createQuery("FROM Course c WHERE c.instructor=1")
-//                    .getResultList();
-//
-//            for(Course c : courses) {
-//                System.out.println("\nCourse: "+ c);
-//            }
-
-
-            System.out.println("Instructor: " + tempInstructor);
+            System.out.println("luv2code: Instructor: " + tempInstructor);
 
             // get courses for instructor
             // Course class 記得加上 default constructor
-            System.out.println("Courses: " + tempInstructor.getCourses());
+            System.out.println("luv2code: Courses: " + tempInstructor.getCourses());
 
             // commit transaction
             session.getTransaction().commit();
 
-            System.out.println("Done!");
+            System.out.println("luv2code: Done!");
 
         } finally {
 
